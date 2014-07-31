@@ -1,7 +1,7 @@
 int SIZE=80;
 boolean end=false;
 char[][] board=new char[SIZE][SIZE];
-int[] food={2,3,5,7,11,13,17,19};
+
 int headX=SIZE/2;
 int headY=SIZE/2;
 int tailX=(SIZE/2)-3;
@@ -10,10 +10,25 @@ int score=0;
 
 int time=0;
 
+char[] tempfood=new char[26];
+char c='A';
+  
+char foodletter='a';
+
+
 void setup()
 {
   size(SIZE*10,SIZE*10);
   background(0,255,0);
+  noStroke();
+  
+  for(int b=0;b<25;b++)
+  {
+    tempfood[b]=(char)(c+b);
+  }
+  
+  
+  
   resetBoard();
 }
 
@@ -81,7 +96,6 @@ void displayBoard()
     {
       if(board[a][b]=='Z')
       {
-        noStroke();
         fill(0,255,0);
         rectMode(CENTER);
         rect(a*10,b*10,10,10);
@@ -108,12 +122,16 @@ void displayBoard()
         ellipse(a*10,b*10,10,10);
       }
       
-      if(board[a][b]=='X')
+      if(board[a][b]>='a'&&board[a][b]<='z')
       {
         fill(255,0,255);
         ellipseMode(CENTER);
         ellipse(a*10,b*10,10,10);
+        
+        text(tempfood[((int)board[a][b])-97],a*10,(b*10)-12);
+        
       }
+      
       
       
     }
@@ -224,7 +242,7 @@ boolean isDead (char f)
 
 boolean isFood (char f)
 {
-  if(f=='X')
+  if(f>='a'&&f<='z')
   {
     spawnFood();
     return true;
@@ -235,5 +253,14 @@ boolean isFood (char f)
 
 void spawnFood()
 {
-  board[(int)random(SIZE)][(int)random(SIZE)]='X';
+    
+    board[(int)random(SIZE)][(int)random(SIZE)]=foodletter;
+    
+    
+    
+    if(foodletter=='z')
+      foodletter='a'; 
+    else
+      foodletter++;
+    
 }
