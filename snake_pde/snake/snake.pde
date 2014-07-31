@@ -60,13 +60,13 @@ void input()
   {
     if(key==CODED)
     {
-      if(keyCode==UP)
+      if(keyCode==UP&&board[headX][headY]!='S')
         board[headX][headY]='W';
-      if(keyCode==DOWN)
+      if(keyCode==DOWN&&board[headX][headY]!='W')
         board[headX][headY]='S';
-      if(keyCode==LEFT)
+      if(keyCode==LEFT&&board[headX][headY]!='D')
         board[headX][headY]='A';
-      if(keyCode==RIGHT)
+      if(keyCode==RIGHT&&board[headX][headY]!='A')
         board[headX][headY]='D';
       
     }
