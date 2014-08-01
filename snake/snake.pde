@@ -14,7 +14,7 @@ char[] tempfood=new char[26];
 char c='A';
   
 char foodletter='a';
-
+boolean game=true;
 
 void setup()
 {
@@ -34,7 +34,9 @@ void setup()
 
 void draw()
 {
-  while (!end&&time==0)
+  if(game)
+  {
+    while (!end&&time==0&&game)
     {
       input();
       end=moveSnake();
@@ -46,6 +48,12 @@ void draw()
     {
       time=0; 
     }
+  }
+
+  else
+  {
+    //insert menus here
+  }
 }
 
 void resetBoard()
