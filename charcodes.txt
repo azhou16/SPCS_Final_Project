@@ -26,3 +26,41 @@ Other:
 X = food
 
 Z = ground
+
+
+
+
+
+
+
+
+
+
+Snake char codes
+
+Head:
+
+0 = W = up
+1 = S = down
+2 = A = left
+3 = D = right
+
+Body:
+
+4 = T = up
+5 = G = down
+6 = F = left
+7 = H = right
+
+Tail:
+
+8 = I = up
+9 = J = down
+10 = L = left
+11 = K = right
+
+Other:
+
+12 = X = food
+
+13 = Z = ground

@@ -156,6 +156,12 @@ void keyPressed(){
   if (keyCode==RIGHT && board[headX][headY]!=2){
     board[headX][headY]=3;
   }
+  if(key == '+'){
+    runSpeed-=1;
+  }
+  if(key == '-'){
+    runSpeed++;
+  }
 }
     //}
   //}
