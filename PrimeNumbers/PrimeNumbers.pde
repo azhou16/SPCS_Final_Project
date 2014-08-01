@@ -16,7 +16,7 @@ for (int a = 1; a <max; a++)
 
   // print the number if prime
   if (isPrimeNumber) {
-    System.out.print(a + " ");
+    System.out.print(a + ", ");
    }
 }
 
