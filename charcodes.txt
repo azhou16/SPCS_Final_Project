@@ -1,0 +1,28 @@
+Snake char codes
+
+Head:
+
+W = up
+S = down
+A = left
+D = right
+
+Body:
+
+T = up
+G = down
+F = left
+H = right
+
+Tail:
+
+I = up
+J = down
+L = left
+K = right
+
+Other:
+
+X = food
+
+Z = ground
